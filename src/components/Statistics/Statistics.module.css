@@ -5,13 +5,11 @@
 p {
   text-transform: capitalize;
   margin: 0;
-  width: 200px;
+  width: 150px;
   padding: 16px;
   display: block;
 }
-.positiv {
-  border: 1px dotted gray;
-}
+
 .good {
   background-color: var(--good-color);
 }
@@ -22,4 +20,13 @@ p {
 
 .bad {
   background-color: var(--bad-color);
+}
+
+.total{
+    font-weight: 700;
+}
+
+.positiv {width: 200px;
+  border: 1px dotted gray;
+  font-weight: 700;
 }

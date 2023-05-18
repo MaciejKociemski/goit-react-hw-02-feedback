@@ -17,7 +17,7 @@ export const Statistics = ({
           </p>
         );
       })}
-      <p>
+      <p className ={css.total}>
         Total: <span className={css.numbers}>{total}</span>
       </p>
       <p className={css.positiv}>

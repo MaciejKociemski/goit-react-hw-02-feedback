@@ -1,0 +1,25 @@
+.numbers {
+  font-weight: 700;
+}
+
+p {
+  text-transform: capitalize;
+  margin: 0;
+  width: 200px;
+  padding: 16px;
+  display: block;
+}
+.positiv {
+  border: 1px dotted gray;
+}
+.good {
+  background-color: var(--good-color);
+}
+
+.neutral {
+  background-color: var(--neutral-color);
+}
+
+.bad {
+  background-color: var(--bad-color);
+}

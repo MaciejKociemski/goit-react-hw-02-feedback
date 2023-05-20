@@ -22,11 +22,12 @@ p {
   background-color: var(--bad-color);
 }
 
-.total{
-    font-weight: 700;
+.total {
+  font-weight: 700;
 }
 
-.positiv {width: 200px;
+.positiv {
+  width: 200px;
   border: 1px dotted gray;
   font-weight: 700;
 }

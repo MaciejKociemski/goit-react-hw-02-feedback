@@ -5,7 +5,8 @@
   margin-right: auto;
 }
 
-.refreshButton {color: gray;
+.refreshButton {
+  color: gray;
   cursor: pointer;
   position: absolute;
   top: -10px;
@@ -15,6 +16,6 @@
 }
 
 .refreshButton:hover {
-  background-color:bisque;
+  background-color: bisque;
   color: brown;
 }

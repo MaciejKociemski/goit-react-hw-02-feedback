@@ -21,18 +21,18 @@ export class App extends Component {
   };
 
   countTotalFeedback = () => {
-    return this.state.good + this.state.neutral + this.state.bad;
+    const { good, neutral, bad } = this.state;
+    return good + neutral + bad;
   };
 
   countPositiveFeedbackPercentage = () => {
-    return Math.floor(
-      (this.state.good /
-        (this.state.good + this.state.neutral + this.state.bad)) *
-        100 || 0
-    );
+    const { good, neutral, bad } = this.state;
+    return Math.floor((good / (good + neutral + bad)) * 100 || 0);
   };
 
   render() {
+    const { good, neutral, bad } = this.state;
+
     return (
       <div className={css.container}>
         <button className={css.refreshButton} onClick={handleRefresh}>
@@ -52,7 +52,7 @@ export class App extends Component {
             <Statistics
               options={Object.keys(this.state)}
               statistic={this.state}
-              total={this.countTotalFeedback()}
+              total={good + neutral + bad}
               positivePercentage={this.countPositiveFeedbackPercentage}
             />
           )}

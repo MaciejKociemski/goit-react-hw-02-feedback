@@ -13,8 +13,7 @@ export const Statistics = ({
         <p key={i} className={css[name]}>
           {name}: <span className={css.numbers}>{statistic[name]}</span>
         </p>
-      )
-      )}
+      ))}
       <p className={css.total}>
         Total: <span className={css.numbers}>{total}</span>
       </p>

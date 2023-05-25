@@ -14,13 +14,10 @@ export class App extends Component {
   };
 
   updateState = nameFeedback => {
-    this.setState(prevState => {
-      let obj = { ...prevState };
-
-      obj[nameFeedback] = prevState[nameFeedback] + 1;
-
-      return obj;
-    });
+    this.setState(prevState => ({
+      ...prevState,
+      [nameFeedback]: prevState[nameFeedback] + 1,
+    }));
   };
 
   countTotalFeedback = () => {

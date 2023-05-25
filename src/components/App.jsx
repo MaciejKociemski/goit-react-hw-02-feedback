@@ -14,10 +14,10 @@ export class App extends Component {
   };
 
   updateState = nameFeedback => {
-    this.setState(oldData => {
-      let obj = { ...oldData };
+    this.setState(prevState => {
+      let obj = { ...prevState };
 
-      obj[nameFeedback] = oldData[nameFeedback] + 1;
+      obj[nameFeedback] = prevState[nameFeedback] + 1;
 
       return obj;
     });

@@ -3,15 +3,22 @@ import { Section } from './Section/Section';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notification/Notification';
-import handleRefresh from '../utils/handleRefresh';
 import css from './App.module.css';
 
+
+const INITIAL_STATE = {
+  good: 0,
+  neutral: 0,
+  bad:0,
+}
+
 export class App extends Component {
-  state = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
-  };
+  state = { ...INITIAL_STATE }
+  
+  handleRefresh = ()=>{
+    this.setState({...INITIAL_STATE})
+  }
+  
 
   handleLeaveFeedback = nameFeedback => {
     this.setState(prevState => ({
@@ -35,7 +42,7 @@ export class App extends Component {
 
     return (
       <div className={css.container}>
-        <button className={css.refreshButton} onClick={handleRefresh}>
+        <button className={css.refreshButton} onClick={this.handleRefresh}>
           Refresh
         </button>
         <Section title="Please Leave feedback">

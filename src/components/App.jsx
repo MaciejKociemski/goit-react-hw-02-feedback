@@ -5,20 +5,18 @@ import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notification/Notification';
 import css from './App.module.css';
 
-
 const INITIAL_STATE = {
   good: 0,
   neutral: 0,
-  bad:0,
-}
+  bad: 0,
+};
 
 export class App extends Component {
-  state = { ...INITIAL_STATE }
-  
-  handleRefresh = ()=>{
-    this.setState({...INITIAL_STATE})
-  }
-  
+  state = { ...INITIAL_STATE };
+
+  handleRefresh = () => {
+    this.setState({ ...INITIAL_STATE });
+  };
 
   handleLeaveFeedback = nameFeedback => {
     this.setState(prevState => ({
